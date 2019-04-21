@@ -24,7 +24,7 @@ ensure => present,
 require => Exec['download-petclinic-war']
 } 
 exec { 'download-petclinic-war':
-command => '/usr/bin/curl -o petclinic.war http://192.241.144.123:8081/artifactory/generic-local/org/springframework/samples/spring-petclinic/1.0.1-SNAPSHOT/petclinic-1.0.1-SNAPSHOT.war',  
+command => '/usr/bin/curl -o petclinic.war http://192.241.144.123:8081/artifactory/generic-local/org/springframework/samples/spring-petclinic/1.0.1-SNAPSHOT/spring-petclinic-1.0.1-SNAPSHOT.war',  
 creates => '/var/lib/tomcat8/webapps/petclinic.war',
 cwd => '/var/lib/tomcat8/webapps',
 require => Package['tomcat8']
